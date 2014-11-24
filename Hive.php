@@ -115,7 +115,7 @@ class Hive
 		$rows = array();
 		$fetchReq = new TFetchResultsReq (array(
 			'operationHandle' => $this->_operationHandle->operationHandle,
-			'orientation'	  => TFetchOrientation.FETCH_NEXT,
+			'orientation'	  => TFetchOrientation::FETCH_NEXT,
 			'maxRows'		  => $this->_maxRows,
 		));
 		return $this->_fetch($fetchReq);
@@ -127,9 +127,9 @@ class Hive
 	 * @param $fetchReq
 	 */
 	protected function _fetch($fetchReq) {
-		$result = $this->_client->FetchResults($fetchReq);
+		$resultsRes = $this->_client->FetchResults($fetchReq);
 		$rowData = array();
-		foreach ($result->results->rows as  $key => $row) {
+		foreach ($resultsRes->results->rows as  $key => $row) {
 			$rows = array();
 			foreach ($row->colVals as $colValue) {
 				$rows[] =  trim($this->_getValue($colValue));
