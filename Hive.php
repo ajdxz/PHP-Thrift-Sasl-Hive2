@@ -6,10 +6,10 @@
  */
 
 $GLOBALS['THRIFT_ROOT'] = dirname(__FILE__).'/Thrift';
-require_once $GLOBALS['THRIFT_ROOT'] . 'packages/hive_service/TCLIService.php';
-require_once $GLOBALS['THRIFT_ROOT'] . 'transport/TSocket.php';
-require_once $GLOBALS['THRIFT_ROOT'] . 'transport/TSaslClientTransport.php';
-require_once $GLOBALS['THRIFT_ROOT'] . 'protocol/TBinaryProtocol.php';
+require_once $GLOBALS['THRIFT_ROOT'] . '/packages/hive_service/TCLIService.php';
+require_once $GLOBALS['THRIFT_ROOT'] . '/transport/TSocket.php';
+require_once $GLOBALS['THRIFT_ROOT'] . '/transport/TSaslClientTransport.php';
+require_once $GLOBALS['THRIFT_ROOT'] . '/protocol/TBinaryProtocol.php';
 
 class Hive
 {
